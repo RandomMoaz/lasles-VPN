@@ -1,0 +1,113 @@
+@import "./mixins";
+
+.pricing {
+  text-align: center;
+  margin-bottom: 20rem;
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    & {
+      margin-bottom: 10rem;
+    }
+  }
+
+  &__plans {
+    display: flex;
+    justify-content: center;
+    gap: var(--padding-50);
+    margin-top: var(--padding-60);
+
+    @media (min-width: 768px) and (max-width: 1150px) {
+      & {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (max-width: 767px) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__plan {
+    max-width: 33.3rem;
+    max-height: 76rem;
+    border: 2px solid #dddddd;
+    padding: 7.963rem 6.973rem 5rem;
+    border-radius: var(--radius-10);
+  }
+
+  .standard &__plan--features {
+    height: 19rem;
+    margin-bottom: 9rem;
+  }
+
+  .premuim &__plan--features {
+    height: 23rem;
+    margin-bottom: 5rem;
+  }
+
+  &__plan--pic {
+    max-width: 100%;
+  }
+
+  &__plan--title {
+    font-size: var(--font-size-18);
+    font-weight: var(--font-weight-500);
+    color: var(--color-dark-blue);
+    margin: var(--padding-30) 0;
+  }
+
+  &__plan--features {
+    margin-bottom: 13rem;
+    height: 15rem;
+  }
+
+  &__plan--feature {
+    @include flex__items-center;
+    gap: 2rem;
+    margin-bottom: var(--padding-10);
+
+    & .pricing-icon {
+      width: 2.4rem;
+    }
+    & .feature-desc {
+      text-wrap: nowrap;
+      font-size: var(--font-size-14);
+    }
+  }
+
+  &__price {
+    font-size: var(--font-size-25);
+    font-weight: var(--font-weight-500);
+    color: var(--color-dark-blue);
+    margin-bottom: var(--padding-20);
+
+    @media (max-width: 991px) {
+      font-size: var(--font-size-20);
+    }
+  }
+
+  &__button {
+    font-weight: var(--font-weight-bold);
+    color: var(--color-mainColor);
+    height: 4.5rem;
+    background-color: var(--color-white);
+    border: 2px solid var(--color-mainColor);
+    border-radius: var(--radius-50);
+    padding: var(--padding-block) 6.294rem;
+    transition: color var(--animation-timing);
+    transition: background-color var(--animation-timing);
+  }
+
+  &__checkbox {
+    display: none;
+
+    &:checked + .pricing__plan {
+      border: 2px solid var(--color-mainColor);
+    }
+    &:checked + label .pricing__button {
+      background-color: var(--color-mainColor);
+      color: var(--color-white);
+      box-shadow: rgb(245 56 56) 0px 23px 26px -17px;
+    }
+  }
+}

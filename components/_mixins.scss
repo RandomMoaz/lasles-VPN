@@ -1,0 +1,9 @@
+@mixin twoColumns {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+@mixin flex__items-center {
+  display: flex;
+  align-items: center;
+}
