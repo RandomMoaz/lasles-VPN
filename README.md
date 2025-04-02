@@ -1,6 +1,6 @@
 # Lasles VPN
 
-![Lasles VPN](https://your-image-url.com/banner.png)
+ https://randommoaz.github.io/lasles-VPN/
 
 Lasles VPN is a high-performance, secure, and reliable Virtual Private Network (VPN) service that provides seamless connectivity, enhanced privacy, and unrestricted internet access for users worldwide.
 
@@ -70,7 +70,7 @@ This project is licensed under the **MIT License** - see the [LICENSE](LICENSE) 
 - **Author:** [Moaz](https://github.com/RandomMoaz)
 - **Email:** moaz.hisham04@gmail.com
 - **GitHub:** [RandomMoaz](https://github.com/RandomMoaz)
-- **Website:** [Lasles VPN](https://laslesvpn.com)
+
 
 ---
 
